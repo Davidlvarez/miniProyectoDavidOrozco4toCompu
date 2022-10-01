@@ -5,3 +5,12 @@ class persona():
         self.nombre=nombre
         self.direccion=direccion
 
+    #creacion de GETTERS
+    def vernumero(self):
+        return self.numero
+
+    def vernombre(self):
+        return self.nombre
+
+    def verdireccion(self):
+        return self.direccion
