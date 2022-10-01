@@ -71,11 +71,36 @@ def eliminarcontacto(nombre):
                 encontrado= False
         if encontrado:
             miscontactos.pop(posicion)
-            print("Datos eliminado")
+            print("Datos eliminados")
         else: 
             print("Dato no encontrado")
 
 def crearrepote():
+    documento = open("reporte contactos.html","w")
+    documento.write("<!doctype html>\n")
+    documento.write("<html>\n")
+    documento.write("<head>\n")
+    documento.write("\t<title>Agenda 2022</title>\n")
+    documento.write("</head>\n")
+    documento.write("<body>\n")
+    documento.write("\t<center>\n")
+    documento.write("\t<h1>Mis contactos</h1>\n")
+    documento.write('\t<table border="1">\n')
+    documento.write("\t\t<tr>\n")
+    documento.write("\t\t\t<td>Número de teléfono</td><td>Nombre</td><td>Dirección</td>\n")
+    for i in range(len(miscontactos)):
+        documento.write("\t\t<tr>\n")
+        documento.write("\t\t\t<td>" + str(miscontactos[i].vernumero()) + "</td><td>" + miscontactos[i].vernombre() + "</td><td>" + miscontactos[i].verdireccion() + "</td>")
+        documento.write("\t\t</tr>\n")
+
+    documento.write("\t\t</tr>\n")
+    documento.write("\t</table>\n")
+    documento.write("\t</center>\n")
+    documento.write("</body>\n")
+    documento.write("</html>")
+    documento.close()
+    print("Reporte HTML creado con éxito...")
+
     print("Creando reporte HTML")
 
 def main():
