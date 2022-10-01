@@ -14,3 +14,13 @@ class persona():
 
     def verdireccion(self):
         return self.direccion
+
+    #creacion de SETTERS
+    def modificarnumero(self, nuevonumero):
+        self.numero= nuevonumero
+
+    def modificarnombre(self, nuevonombre):
+        self.nombre= nuevonombre
+
+    def modificardireccion(self, nuevodireccion):
+        self.direccion= nuevodireccion
